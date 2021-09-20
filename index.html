@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>🍽 Доставка еды | Walking Food</title>
+<!-- Иконка сайта -->
+<link rel="shortcut icon" href="img/Logo_icon.png" type="image/png">	
+	
+<style type="text/css">
+@import url("css/style.css");
+@import url("css/Cart.css");	
+@import url("css/Products.css");
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>	
+<body onload = "FynctionLoad()">	
+	
+<div id="Loader"></div>	
+		
+<div id="wrapper" class="animate-bottom">	
+	
+<div class="over">
+	
+<div class="Content"><div class="background-image"></div></div>
+
+<div id="NAV">
+	
+	<nav class="fixed-nav-bar">
+		
+ <a class="Logo" href="index.html"><img src="img/Logo.svg" alt="#" /></a>
+		
+  <ul class="fix" id="fix">
+        	   
+		<li><a href="#menu" class="main-buttons">МЕНЮ</a></li>
+        <li><a href="#contact" class="main-buttons">СВЯЗЬ</a></li>
+        <li><a href="#ABOUT" onclick="CallAbout()" class="main-buttons">О НАС</a></li>
+	 	<li><a href="#BASKETPOINT" onclick="CallBasket()" class="main-buttons Cart">
+		<span  class="Cart_quantiy">0</span> КОРЗИНА</a></li>
+		<div class="HelpMusBut"></div>	
+  </ul>
+     
+
+<button class="MusBut" id="MyBut" type="button" onclick="ChangeM()">
+  <img src="img/Music_off.svg" alt="#" id="image"/>
+  </button>
+		
+			<audio id="myaudio">
+    	<source src="snd/erik-satie-gymnopedie-no-1.mp3" type="audio/mpeg" preload="none">
+			</audio>
+	
+	
+</nav>
+	
+	</div>
+
+<div id="MAIN">
+	
+	<header id="header">
+  <div class="intro">
+      <div class="container">
+          <div class="intro-text">
+            <pre>Walking <br>  Food</pre>
+       	  </div>  
+      </div>
+  </div>
+</header>
+	
+	</div>
+	
+<div id="BASKET">
+	
+	<div>
+		
+		
+	 
+	  <div class="Order_modal">
+				
+				
+					<div class="Modal_content">
+					
+						
+						<div class="Modal_top">
+						<h2 class="Modal_content_title">Оформление заказа</h2>
+						</div>
+					
+						<div class="Modal_content_info">
+						
+							<div class="Order_modal_quantity Order_modal_info_item">Количество: <span class="Bool">3 шт</span></div>
+						
+							<div class="Order_modal_sum Order_modal_info_item">Общая сумма заказа: <span class="Bool">1500 ₽</span></div>
+							
+							<div class="Order_modal_products Order_modal_info_item">
+								<button class="Order_modal_open">Состав заказа</button>
+								 
+								<ul class="Order_modal_list" data-simplebar>
+								
+															
+								</ul>
+								
+							</div>
+														
+						</div>
+							<!-- НА ВСЯК УКАЗАЛИ ПОСТ  -->
+							<form action="#" class="Order_modal_form Form_padding Order_form" method="POST" >
+								
+								<input type="hidden" name="form_subject" value="Тема письма">
+						
+								<label class="form_label Order_label">
+								<span class="Order_text">Ваше <br>имя</span>			
+								<input type="text" name="Имя" class="Order_input">			
+								</label>
+								<label class="form_label Order_label">
+								<span class="Order_text">Номер <br>телефона</span>			<input type="tel" name="Телефон" class="Order_input" placeholder="+7 (___) ___-__-__">				
+								</label>
+								<label class="form_label Order_label">
+								<span class="Order_text">Адрес <br>доставки</span>			<input type="text" name="Адрес" class="Order_input" placeholder="Улица Пушкина, дом Колотушкина">		
+								</label>
+								<label class="form_label Order_label">
+								<span class="Order_text">Cпособы <br>оплаты</span>			<input type="text" name="Способ оплаты" class="Order_input" placeholder="Наличными или картой">				
+								</label>
+								<label class="form_label Order_label">
+								<textarea name="text" name="Комментарий" class="Order_input" placeholder="Комментарий к заказу"></textarea>		
+								</label>
+								<button type="submit" class="Order_but">Оформить заказ</button>
+								
+							</form>
+						
+					</div>
+					
+					
+				
+				</div>
+			
+		   <div id="BASKETPOINT" class="Cart_Content">
+			<li class="fixback3"><a href="#MAIN" onclick="CallAboutBack5()" class="main-buttons">НАЗАД</a></li>
+			<ul class="Cart_content_list" data-simplebar>
+				
+			
+				
+			</ul>
+			
+			<!-- Конец карточки ПОКУПКИ -->
+			<div class="Cart_content_bottom">
+			
+				<div class="Cart_content_fullprice">
+						<span>Итог:</span>
+						<span class="fullprice"> 0 ₽</span>
+				</div>
+				
+				<button href="#order" id="Hidd" class="orderbutton" disabled>Заказать</button>
+				<!-- CallAboutBack5()  -->
+			</div>
+			
+		  </div>	
+	
+	</div>	
+	</div>
+	
+<div id="ABOUT">
+	
+	<section class="about">
+			<li class="fixback"><a href="#MAIN" onclick="CallAboutBack()" class="main-buttons">НАЗАД</a></li>
+		<div class="roow3">
+		
+                <div class="col3 col_copy aboutstyle">
+                    <p>Здравствуйте, дорогие посетители, мы рады приветствовать вас в нашем скромном заведении. <br>Здесь вы сможете уталить жажду и голод - мы уверены, наша еда не оставит вас равнодушными</p>
+                </div>
+	 			<div class="col3 col_phone aboutstyle">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.5323050794!2d41.89842231573141!3d45.014118671382704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f9aa3154387c4d%3A0x684765d853860fdb!2z0YPQuy4g0KLRg9GF0LDRh9C10LLRgdC60L7Qs9C-LCAyOCDQutC-0YDQv9GD0YEgOCwg0KHRgtCw0LLRgNC-0L_QvtC70YwsINCh0YLQsNCy0YDQvtC_0L7Qu9GM0YHQutC40Lkg0LrRgNCw0LksIDM1NTAzMg!5e0!3m2!1sru!2sru!4v1622592142715!5m2!1sru!2sru" width="600" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ 				</div> 
+	   </div>
+	
+	</section>
+	
+	</div>
+	
+<div id="EAT1">
+	
+	<section class="PR2">
+		<li class="fixback2"><a href="#MAIN" onclick="CallAboutBack2()" class="main-buttons2">НАЗАД</a></li>
+		<!--Это и делает отступы сверху белые -->
+    <div class="Product_content Grid_content">
+		
+		<ul class="Product-Grid">
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DRINKS/Masala tea/IMG_0561.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">МАСАЛА ЧАЙ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Бодрящий пряный напиток, который готовится с так называемыми «тёплыми» специями.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">200₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DRINKS/Milk C/IMG_0302.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">МОЛОЧНЫЙ КОКТЕЙЛЬ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Десертный напиток на основе молока и мороженого, один из символов американской кухни.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">300₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>			
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DRINKS/Oat Milk/IMG_0279.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">ОВСЯНОЕ МОЛОКО</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Продукт на основе овсяных хлопьев или зерна овса и простой воды.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">150₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+		</ul>
+		
+	</div>
+		
+		
+	</section>
+	
+	</div>	
+	
+<div id="EAT2">
+	
+	<section class="PR3">
+		<li class="fixback2"><a href="#MAIN" onclick="CallAboutBack4()" class="main-buttons2">НАЗАД</a></li>
+		<!--Это и делает отступы сверху белые -->
+    <div class="Product_content Grid_content">
+		
+		<ul class="Product-Grid">
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Borscht soup/IMG_0197.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">БОРЩ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Разновидность супа на основе свёклы, которая придаёт ему характерный красный цвет.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">200₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Chickpea Patties/IMG_0357.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">КОТЛЕТЫ ИЗ НУТА</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Вегетарианские котлеты из нута, так называемого турецкого гороха.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">450₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>			
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Draniki/IMG_0501.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">ДРАНИКИ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Драники или деруны – блюдо на основе тёртого картофеля с добавлением муки, яиц, лука.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">300₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Egg flake soup/IMG_0193.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">СУП С ЯИЧНЫМИ ХЛОПЬЯМИ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Cуп с клочками яиц, варёных в курином бульоне.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">250₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Lavash roast/IMG_0419.jpg" alt="" >
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">ЖАРЕННЫЙ ЛАВАШ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Лаваш с сыром и зеленью, жаренный на сковороде.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">150₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Pasta/IMG_0238.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">СПАГЕТТИ ПУТТАНЕСКА</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Итальянское блюдо, в котором ингредиентами обычно служат томаты, оливковое масло, анчоусы, оливки, каперсы и чеснок, а также макаронные изделия.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">500₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/MAIN_COURSE/Pizza/IMG_0535.jpg" alt="" >
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">ОВОЩНАЯ ПИЦЦА</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Традиционное итальянское блюдо в виде круглой дрожжевой лепёшки, выпекаемой с уложенной сверху начинкой из томатного соуса, сыра и часто других ингредиентов.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">550₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+		</ul>
+		
+	</div>
+		
+		
+	</section>
+	
+	</div>		
+	
+<div id="EAT3">
+	
+	<section class="PR">
+		<li class="fixback2"><a href="#MAIN" onclick="CallAboutBack3()" class="main-buttons2">НАЗАД</a></li>
+		<!--Это и делает отступы сверху белые -->
+    <div class="Product_content Grid_content">
+		
+		<ul class="Product-Grid">
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DESSERTS/Banana bread/IMG_0481.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">БАНАНОВЫЙ ХЛЕБ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Сладкий кекс из спелых бананов и жаренных грецких орехов.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">300₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DESSERTS/Granola/IMG_0213.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">ГРАНОЛА</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Блюдо для завтрака, содержащее плющеную овсяную крупу, орехи и мёд, иногда рис, которые обычно запечены до хрустящего состояния.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">200₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>			
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DESSERTS/Mannick/IMG_0405.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">МАННИК</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Выпечка на различной молочной закваске, которая вместо муки использует манную крупу.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">400₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DESSERTS/Muesli bar/IMG_0504.jpg" alt="">
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">МЮСЛИ </a>	
+		</h3>
+		<div class="Product_info">
+			<span>Мюсли — еда, приготовленная из сырых или запеченных злаков (пшеницы, ячменя, ржи, кукурузы или риса), сушеных фруктов и ягод, орехов, отрубей, меда и специй.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">250₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+			<li class="Product_Grid_item">
+			<article class="Products">
+			 <a href="#" class="Product_image ">
+				 <img class="Product_img Scale" src="img/Positions/DESSERTS/Pancakes/IMG_0265.jpg" alt="" >
+			 </a>
+		
+		<!-- Название и описание до цены -->
+		<h3 class="Product_title LSkew">
+			<a href="#">ПАНКЕЙКИ</a>	
+		</h3>
+		<div class="Product_info">
+			<span>Кулинарное изделие, представляющее собой толстый пышный блинчик, по вкусу напоминающий бисквитный корж.</span>
+		</div>
+		<!-- Цена -->
+		<div class="TopStroke">
+		<div class="Product_price">
+		<span class="ProductPrice">450₽</span>
+		<button class="Product_but">Добавить в корзину</button>
+		</div>
+		</div>
+		
+	</article>
+			</li>
+		</ul>
+		
+	</div>
+		
+		
+	</section>
+	
+	</div>			
+	
+<div id="SLID">
+	
+<div class="Content">
+<div class="Slider">
+  <div id="Slider_wrapper">
+      <div class="Slider_item im Showing"></div>
+      <div class="Slider_item im"> </div>
+      <div class="Slider_item im"> </div>
+      <div class="Slider_item im"></div>
+  </div>
+</div>	
+</div>	
+
+</div>	
+	
+<div id="SECT">
+	
+	<section id="menu" class="services">
+			<h2 class="Lines">МЕНЮ</h2>
+            <div class="roow">
+                <div class="col left service-anim">
+                    <div class="service-item">
+                        <a href="#EAT1" onclick="CallEat1()">
+                        <img src="img/Drink.jpg" alt="Drink">
+						<h4>Напитки</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col middle service-anim">
+                    <div class="service-item">
+						<a href="#EAT2" onclick="CallEat2()">
+                        <img src="img/Main course.jpg" alt="Main course">
+                        <h4>Главные блюда</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col right service-anim">
+                    <div class="service-item">
+						<a href="#EAT3" onclick="CallEat3()">
+                        <img src="img/Desserts.jpg" alt="Desserts">
+                        <h4>Десерты</h4>
+                        </a>
+                    </div>
+                </div>
+               </div>
+
+    </section>
+
+	
+	</div>		
+
+<div id="FOR">
+	
+	<div id="contact" class="FormBack">
+	<div class="form">
+	<!-- форма конечно будет отправляться за счет JS - action не
+	нужен, но ставим его с заглушкой, что ВАЛИДАТОР правильно работал-->
+		
+	<div class="Smart"></div>
+	<div class="Smart2"></div>		
+		
+	<form action="#" id="form" class="form_body">
+			<h1 class="form_title">Отправить нам сообщение</h1>
+			<div class="form_item">
+					<!-- label будет привязан к formName -->
+					<label for = "formName" class="form_label">Имя:</label>
+					<input id="formName" type="text" name="Name" class="form_input _Req">
+			</div>
+			<div class="form_item">
+					<label for = "formEmail" class="form_label">E-mail:</label>
+					<input id="formEmail" type="text" name="Email" class="form_input _Req _Email">
+			</div>
+			<div class="form_item">
+					<label for = "formMessage" class="form_label">Сообщение:</label>
+					<textarea name="Message" id="formMessage" class="form_input _Req"></textarea>
+			</div>
+			<div class="form_item">
+					<div class="checkbox">
+							<input id="formAgree" type="checkbox" name="Agree" class="checkbox_input _Req">
+							<label for = "formAgree" class="checkbox_label"><span>Я даю свое согласие на обработку моих персональных данных</span></label>
+					</div>
+			</div>
+							<button type="submit" class="form_button"></button>
+	</form>
+	</div>
+</div>
+	
+	
+	</div>	
+
+<div id="FOOT">
+	
+	<footer>
+		<div class="roow2">
+                <div class="col2 col_copy">
+                    <p>&copy; 2021 WalkingFood. Все права защищены.</p>
+                </div>
+	 			<div class="col2 col_phone">
+					<div class="phone"></div>
+					<a href="tel: 8 (959) 769 70 29" class="call">8 (959) 769 70 29</a>
+ 				</div> 
+	   </div>
+ </footer>
+	
+	</div>			
+	
+<!-- Откладывает выполнение скрипта до тех пор, пока вся страница не будет загружена полностью-->
+</div>	
+</div>
+	
+<script src="js/jquery-3.6.0.js"></script>		
+<script src="js/Main.js"></script>	
+<script src="js/Cart.js"></script>
+<script src="js/simplebar.js"></script>	
+
+</body>
+</html>
