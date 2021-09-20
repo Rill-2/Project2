@@ -1,0 +1,524 @@
+/*ПРОДУКТЫ И ВСЕ ДЛЯ НИХ*/	
+		
+@media (max-width: 1920px){
+	
+	
+	a.main-buttons2 {
+	/*ГЛАНВЫЕ КНОПКИ*/
+		
+  /*Цвет кнопок*/
+  background:#E9E9E9;
+  /*Off подчеркивание*/
+  text-decoration: none;
+  /*Цвет текста*/
+  color:#000000;
+  display: inline-block;
+  float: left;
+  border-color:#000000;
+  letter-spacing: 2px;
+  font-family: 'Bangers', cursive;	
+  font-weight: bold;
+  overflow: hidden;	
+ 			
+	
+  
+  /*ДЛЯ АДАПТАЦИИ*/
+ 
+  /*Исходник:
+	calc(minpx + (max-min) * ((100vw - 320px) / (1920 - 320)));*/
+   		
+  /*max - 5  min - 4*/
+  border: calc(4px + 1 * ((100vw - 320px) / (1920 - 320))) solid;
+  
+  /*Макс размер - 22, а минимум - 14*/
+  font-size: calc(14px + 8 * ((100vw - 320px) / (1920 - 320)));	 
+  		
+  /*Больш 150 минимум 100*/
+  width: calc(100px + 50 * ((100vw - 320px) / (1920 - 320)));	
+		
+  /*max 30  min 20*/		
+  height: calc(20px + 10 * ((100vw - 320px) / (1920 - 320)));
+  
+  /*max 15  min 5*/	
+  padding-bottom: calc(5px + 10 * ((100vw - 320px) / (1920 - 320)));
+  /*max 30  min 5*/			
+  padding-left:  calc(5px + 25 * ((100vw - 320px) / (1920 - 320)));
+  /*max 30  min 5*/			
+  padding-right: calc(5px + 25 * ((100vw - 320px) / (1920 - 320)));
+  /*max 15  min 5*/			
+  padding-top: calc(5px + 10 * ((100vw - 320px) / (1920 - 320)));
+		
+  /*max 120  min 0*/			
+  margin-right: calc(0px + 120 * ((100vw - 320px) / (1920 - 320)));		
+  /*max 40  min 0*/		
+  margin-left: calc(0px + 40 * ((100vw - 320px) / (1920 - 320)));		
+  margin-top: 0px;
+  /*МОЖЕТ УВЕЛИЧИТЬ*/		
+  
+	}
+	
+	section.PR0 {
+    position: relative;
+	height: 400px;
+	background-color:#fff;
+	box-shadow: 0 3px 30px #575555 inset; 
+
+}
+	
+	/*Фон*/
+	section.PR {
+    position: relative;
+	height: 1400px;
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+
+}
+	
+	section.PR2 {
+    position: relative;
+	height: 1400px;
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+
+}
+	section.PR3 {
+    position: relative;
+	height: 2150px;
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+
+}
+
+	
+	/*Сетка ГРИДАМИ*/
+	.Grid_content{
+		max-width: 100%;
+		display: grid;
+		/*Отступы*/
+		grid-gap: 10px;
+		/*Задаёт количество столбцов "колонок" в сетке и может определять ширину каждой из них*/
+		grid-template-columns: repeat(4, 1fr);
+		
+		/*1/4 родителя от наших всех колонок*/
+	
+	}
+	/*Для самого Ul задаем гриды*/
+	.Product-Grid{
+		/*Чтоб ТОЧНО занималопо 3 колонки в линию*/
+		width: 100%;
+		grid-column: 2 span;
+		display: grid;
+		grid-column-gap: 160px;
+		grid-row-gap: 0px;
+		grid-template-columns: repeat(3, 1fr);
+		/*То есть по 3 ячейки по ширине*/
+		margin: 0px 0px 0px 0px;
+		
+	}
+
+	.Product_Grid_item{
+		
+	}
+
+
+	/*Что в каждом позиции ARTICLE*/
+	.Products{
+		background-color:#fff;
+  		border:solid 4px #000;
+  		box-shadow:0 6px 6px -6px #000;
+		padding: 10px 20px 20px 20px;
+		margin: 100px 0px -50px 50px ;
+		
+	
+	}
+	
+	.Product_image{
+		position: relative;
+		overflow: hidden;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+/*.Product_img*/
+		 .Product_img {
+			 /*Для адаптации*/
+		/*Занимает по объему объекта, в котором находится*/
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	
+    .Scale {
+    transition: 1s; 
+   	}
+   .Scale:hover {
+    transform: scale(1.4); 
+   }
+	
+	.Product_title a{
+		  font-family: 'Bangers', cursive;
+		  color: #121212;
+		  text-decoration: none;
+		  background-color:#fff;		
+		  line-height: calc(40px + 10 * ((100vw - 320px) / (1920 - 320)));				
+		  font-size: 20px;		
+  		  border:solid 3px #000;
+		  border-color:#000000;
+  		  margin:0px 0px 0px 10px;
+		  background:#E9E9E9;
+		  
+		  pointer-events: none;
+	}
+	
+	.Product_title a:hover, .Product_title a:active
+	{background:#FFFFFF;}
+	
+	.LSkew{
+		
+  		transform:skew(-15deg);
+	}
+	
+	.Product_info{
+		 background:#000;
+		 border: 3px solid;
+		 border-radius: 10px;
+		 padding: 16px 2px 16px 2px;
+		 margin: 5px 0px 20px 0px;
+		
+		 color:#fff;
+	     text-align: center;
+  		 font-family: 'Source Sans Pro', sans-serif;
+		 font-size: 15px;
+	}
+	
+	.Product_price{
+		
+		display: flex;
+		align-items: center;
+		margin: 20px 0px 0px 40px;
+	}
+	.ProductPrice{
+		/*max 250px min 100px*/
+		width: 20px;
+		
+		padding: 0px 70px 0px 0px;
+		font-family: 'Bangers', cursive;
+		font-size: 34px;
+		
+		
+	}
+	.Product_but{
+		position: absolute;
+		font-family: 'SF', cursive;
+		font-size: 14px;
+		font-weight: 600;
+		
+		cursor: pointer;
+		color:#fff;		
+		
+		background:#000;
+		border: 4px solid;
+		border-color: black;
+		border-radius: 10px;
+		padding: 5px 20px 5px 20px;
+		margin: 0px 0px 0px 140px;
+
+		width: 150px;
+	}
+	
+		.Product_but:hover, .Product_but:active
+		{
+			color:#000;
+			background:#fff;
+		}
+	
+	
+		.TopStroke{
+ 		 display: flex;
+  		 flex-direction: row;
+		 border-top: 3px solid #000; 		 
+		 /*min 160 max 350*/
+		 width: 350px;
+		 position: relative;
+		
+		}
+}		
+		
+@media (min-width: 1400px) and (max-width: 1920px){
+
+	
+	.fixback2{
+	
+	position: relative;
+		
+	width:10px;
+	margin-top: 20px;
+	margin-bottom: -160px;
+		
+	/*min 565px  max 760*/	
+	margin-right: 260px;
+	
+		  		
+	}
+	
+	
+	section.PR {	
+	/*max 1808px min 1385px +17 к МАКСИМУМУ*/
+	width: calc(1402px + 518 * ((100vw - 1400px) / (1920 - 1400)));	
+	height: 1800px;
+	}
+	
+	section.PR2 {	
+	width: calc(1402px + 518 * ((100vw - 1400px) / (1920 - 1400)));	
+	height: 1000px;
+	}
+	
+	section.PR3 {	
+	width: calc(1402px + 518 * ((100vw - 1400px) / (1920 - 1400)));	
+	height: 2350;
+	}
+	
+		.Products{
+			/*max 50px min 40px*/
+			margin-left: calc(40px + 10 * ((100vw - 1400px) / (1920 - 1400)));
+		
+	
+	}
+
+	.Product-Grid{
+		/*max 160px min 0*/    
+		grid-column-gap: calc(0px + 215 * ((100vw - 1400px) / (1920 - 1400)));
+	}
+
+		.TopStroke{
+	 	
+		 /*min 330px max 350*/
+		 width: calc(330px + 20 * ((100vw - 1400px) / (1920 - 1400)));
+		
+		}
+}
+
+@media (min-width: 950px) and (max-width: 1400px){
+	
+	
+	a.main-buttons2 {
+	  
+	
+		
+  /*max 15px  min 10px*/	
+  padding-bottom: calc(10px + 5 * ((100vw - 950px) / (1400 - 950)));	
+  /*max 25  min 10px*/	
+  padding-left: calc(10px + 15 * ((100vw - 950px) / (1400 - 950)));			
+  /*max 25  min 10px*/			
+  padding-right: calc(10px + 15 * ((100vw - 950px) / (1400 - 950)));			
+  /*max 15  min 10px*/			
+  padding-top: calc(10px + 5 * ((100vw - 950px) / (1400 - 950)));	
+  
+	}
+	
+	
+	.fixback2{
+		
+	width:10px;
+	margin-top: 20px;
+	margin-bottom: -70px;
+		
+	/*min 376px   max 565px*/	
+	margin-left: calc(376px + 210 * ((100vw - 950px) / (1400 - 950)));	
+	margin-right: 0px;
+		  		
+	}
+	
+	section.PR {
+	/*max 2100px min 1800px*/				
+	height: calc(1800px + 500 * ((100vw - 950px) / (1400 - 950)));
+	/*max 1365 min 933px получаем то min-width, то min+width */		
+	width: calc(950px + 450 * ((100vw - 950px) / (1400 - 950)));	
+}
+	
+	section.PR2 {
+	/*max 1600px min 1300px*/		
+	height: calc(1300px + 500 * ((100vw - 950px) / (1400 - 950)));		
+	/*max 1365 min 933px получаем то min-width, то min+width */		
+	width: calc(950px + 450 * ((100vw - 950px) / (1400 - 950)));	
+}
+	
+	section.PR3 {
+	/*max 2900px min 2450px*/		
+	height: calc(2450px + 650 * ((100vw - 950px) / (1400 - 950)));		
+	
+		/*max 1365 min 933px получаем то min-width, то min+width */		
+	width: calc(950px + 450 * ((100vw - 950px) / (1400 - 950)));	
+}
+	
+	
+	.Product-Grid{
+		/*max 150px min 100px*/		
+		grid-column-gap: calc(100px + 50 * ((100vw - 950px) / (1400 - 950)));
+
+		grid-template-columns: repeat(2, 1fr);
+		/*То есть по 3 ячейки по ширине*/
+		margin: 0px 0px 0px 0px;
+		
+		/*max 110px min 20px*/
+		margin-left: calc(20px + 90 * ((100vw - 950px) / (1400 - 950)));	
+		
+	
+	}
+	
+	
+	.Product_price{
+		
+
+		margin: 20px 0px 0px 40px;
+		
+		
+		/*min 0 max 40px*/
+		margin-left: calc(0px + 40 * ((100vw - 950px) / (1400 - 950)));
+	}
+	
+	
+	.Product_but{
+		
+		font-size: 14px;
+		
+		padding: 5px 20px 5px 20px;
+		margin: 0px 0px 0px 0px;
+		
+		/*min 125px max 140px*/
+		margin-left: calc(125px + 15 * ((100vw - 950px) / (1400 - 950)));
+		/*min 120px max 150px*/		
+		width: calc(120px + 30 * ((100vw - 950px) / (1400 - 950)));
+	}
+	
+	
+	.TopStroke{
+ 
+		 border-top: 3px solid #000; 		 
+		 /*min 250px max 350*/
+		 width: calc(250px + 100 * ((100vw - 950px) / (1400 - 950)));
+		
+		
+		}
+	
+}
+
+@media (min-width: 320px) and (max-width: 950px){
+	
+	a.main-buttons2 {
+	  
+	
+		
+  /*max 15px  min 10px*/	
+  padding-bottom: calc(10px + 5 * ((100vw - 950px) / (1400 - 950)));	
+  /*max 25  min 10px*/	
+  padding-left: calc(10px + 15 * ((100vw - 950px) / (1400 - 950)));			
+  /*max 25  min 10px*/			
+  padding-right: calc(10px + 15 * ((100vw - 950px) / (1400 - 950)));			
+  /*max 15  min 10px*/			
+  padding-top: calc(10px + 5 * ((100vw - 950px) / (1400 - 950)));	
+  
+	}
+	
+	
+	.fixback2{
+		
+	width:10px;
+	margin-top: 20px;
+	margin-bottom: -70px;
+		
+	/*min 100px   max 376px*/	
+	margin-left: calc(100px + 276 * ((100vw - 320px) / (950 - 320)));	
+	margin-right: 0px;
+		  		
+	}
+	
+	
+	section.PR {
+	/*max 4000px min 2600px*/	
+	height: calc(2950px + 1620 * ((100vw - 320px) / (950 - 320)));	
+		
+	/*max 933px min 300px*/		
+	width: calc(320px + 630 * ((100vw - 320px) / (950 - 320)));	
+	
+}
+	section.PR2 {
+	/*max 2500px min 1700px*/	
+	height: calc(1850px + 1000 * ((100vw - 320px) / (950 - 320)));	
+		
+	/*max 933px min 300px*/		
+	width: calc(320px + 630 * ((100vw - 320px) / (950 - 320)));	
+	
+}
+	
+	section.PR3 {
+	/*max 5550px min 3650px*/	
+	height: calc(4200px + 2100 * ((100vw - 320px) / (950 - 320)));	
+		
+	/*max 933px min 300px*/		
+	width: calc(320px + 630 * ((100vw - 320px) / (950 - 320)));	
+	
+	}
+	
+	
+	.Product-Grid{	
+		grid-template-columns: repeat(1, 1fr);
+		/*max 145px min -52px*/	
+		margin-left: calc(-52px + 197 * ((100vw - 320px) / (950 - 320)));	
+	}
+	
+	.Product_price{
+		margin: 20px 0px 0px 40px;		
+		/*min 10 max 40px*/
+		margin-left: calc(10px + 30 * ((100vw - 320px) / (950 - 320)));	
+	}
+	
+	.Product_but{
+		
+		/*min 13px  max 15px*/
+		font-size: calc(13px + 2 * ((100vw - 320px) / (950 - 320)));	
+
+		padding: 5px 0px 5px 0px;
+
+		
+		/*min  max 20px*/
+		padding-left: calc(0px + 20 * ((100vw - 320px) / (950 - 320)));	
+		/*min  max 20px*/
+		padding-right: calc(0px + 20 * ((100vw - 320px) / (950 - 320)));	
+		
+		margin: 0px 0px 0px 0px;
+		
+		/*min 90px  max 240px*/		
+		margin-left: calc(90px + 150 * ((100vw - 320px) / (950 - 320)));	
+			
+		/*min 70px  max 150px*/		
+		width: calc(70px + 80 * ((100vw - 320px) / (950 - 320)));	
+	}
+	
+	
+	.TopStroke{	 
+		 /*min 180px max 450px*/
+		 width:calc(180px + 270 * ((100vw - 320px) / (950 - 320)));			 		 
+			
+		}
+	
+	.Product_title a{
+		  /*min 14px max 24px*/		
+		  font-size: calc(14px + 10 * ((100vw - 320px) / (950 - 320)));	
+		
+	}
+
+	.ProductPrice{
+	
+		/*max 34px min 28px */
+		font-size: calc(28px + 6 * ((100vw - 320px) / (950 - 320)));			 		 
+
+	}
+	
+	.Product_info{
+		/*max 15px min 13px */
+		 font-size: calc(13px + 2 * ((100vw - 320px) / (950 - 320)));	
+	}
+
+}

@@ -1,0 +1,549 @@
+
+@media (max-width: 1920px){
+	
+	.Pint{
+
+	/*Дял небольшого отступа до приближения к корзине*/
+	}
+	
+	
+	.Cart_quantiy{
+	position: relative;
+	padding-right: 1px;
+    /*Макс размер - 18, а минимум - 14*/
+  	font-size: calc(14px + 6 * ((100vw - 320px) / (1920 - 320)));	 		
+	bottom: 3px;	
+	}
+	
+	.Cart_quantiy.active{
+		animation: QuantiyActive 2s ease-in-out infinite;
+	}
+	@keyframes QuantiyActive {
+  	   0% { bottom: 3px; }
+	  50% { bottom: 8px; }	
+     100% { bottom: 3px;	 }
+	}
+	
+	
+	.Cart{
+	}
+	
+	/*Подсветка после добавления товара, 
+	который горит, когда что-то есть в корзине*/
+	.Cart.active{
+		animation: CartActive 2s linear infinite;
+	}
+	@keyframes CartActive {
+  	   0% { box-shadow: 0 0 3px 0 #fff; }
+ 	  25% { box-shadow: 0 0 10px 0 #fff; }
+	 50% { box-shadow: 0 0 20px 0 #fff; }
+	75% { box-shadow: 0 0 10px 0 #fff; }		
+  100% { box-shadow: 0 0 3px 0 #fff; }
+	}
+
+	
+	.Cart_Content{
+		/*Благодаря позиции такой - все объекты внутри
+		этого блока будут находитсья внутри его*/
+		z-index: 7;
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%);
+		
+		margin: 50 auto;
+		margin-bottom: 50px;
+		
+		/*max 800px min 220px*/
+		width: calc(220px + 900 * ((100vw - 320px) / (1920 - 320)));	
+		 
+		background:#E9E9E9;
+		border: 5px solid;
+		padding: 20px;
+		cursor: default;
+		/*не забыть*/
+		visibility:visible;
+		opacity: 1;
+		transition: .95s opacity, .95s visibility;
+	}
+	
+	.Cart_Content.hid{
+		opacity: 0;
+   		visibility: hidden;
+	}
+	
+	
+	.Cart_content_list{
+		max-height: 600px;
+
+	}
+
+
+	.Cart_content_item{
+		 z-index: 5;
+		 border-bottom:dotted 3px #000;
+		 border-bottom-width: 6px;
+		 width: calc(200px + 530 * ((100vw - 320px) / (1920 - 320)));	
+		/*
+		width: calc(175px + 555 * ((100vw - 320px) / (1920 - 320)));	
+		max 730px*/
+		
+		
+	}
+	
+	.Cart_content_item li{
+		margin-left: calc(90px - 70 * ((100vw - 320px) / (1920 - 320)));			
+		/*max 0 px min 70px*/
+	}
+	
+	
+	/*Плюс выделение при наведении*/
+	.Cart_product{
+		display: flex;
+		align-items: center;
+		padding: 15px 0px;
+		
+		transition: background-color 0.4s;
+	}
+	.Cart_product:hover{
+		background-color:#D7D7D7;
+	}
+	
+	.Cart_product_img{
+		/*max 250 min 70px*/
+		max-width: calc(70px + 180 * ((100vw - 320px) / (1920 - 320)));	
+		max-height: calc(70px + 180 * ((100vw - 320px) / (1920 - 320)));	
+		
+		object-fit: cover;
+		margin-left: calc(-30px + 30 * ((100vw - 320px) / (1920 - 320)));	
+		
+		
+	}
+	
+	.Cart_product_text{
+		/*min 5 max 150*/
+		margin-right: calc(5px + 145 * ((100vw - 320px) / (1920 - 320)));	
+		margin-left: calc(0px + 50 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 50px*/
+		
+	}
+	
+	.Cart_product_title{
+		  font-family: 'Bangers', cursive;
+		  color: #121212;
+		  text-decoration: none;
+		  background-color:#fff;	
+		
+		  font-size: calc(12px + 18 * ((100vw - 320px) / (1920 - 320)));		
+		
+  		  border:solid 3px #000;
+		  border-color:#000000;
+  		  margin:0px 0px 40px 20px;
+		
+		   /*max 20  min 0*/		
+  		margin-left: calc(10px + 20 * ((100vw - 320px) / (1920 - 320)));	
+		
+  		  padding:5px 10px;
+		  background:#fff;
+		  max-width: calc(70px + 210 * ((100vw - 320px) / (1920 - 320)));	
+		  
+		
+		
+	}
+	
+	.Cart_product_price{
+		border-bottom: 3px solid #000; 		 		
+		
+		
+		margin-right: 10px;
+		margin-left: calc(18px - 18 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 30 min 18px*/
+		
+		padding-left: 10px;
+		padding-right: 8px;
+		
+		font-family: 'Bangers', cursive;
+		font-size: calc(16px + 24 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 40 min */
+		
+		
+	}
+	
+	.Cart_product_delete{
+		
+		/*max 50 min 30*/
+		width: calc(30px + 20 * ((100vw - 320px) / (1920 - 320)));	
+		height: calc(30px + 20 * ((100vw - 320px) / (1920 - 320)));	
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		background-image: url("../img/Trash bin/TB_1.svg");		
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor:pointer;
+		transition: filter 0.2s ease;
+	}
+	.Cart_product_delete:hover{
+		/*По вертикали чуть и размыли*/
+		 filter: drop-shadow(0px 1px 5px rgba(255, 0, 0, 1));
+	} 
+	/*Краснеет при наведении*/
+
+	
+	
+	.Cart_content_bottom{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top:solid 3px #000;
+		border-top-width: 3px;
+		
+	}
+	
+	.Cart_content_fullprice{
+		
+	
+		 padding: 20px 0px 0px 60px;
+		 margin: 10px 0px 20px 0px;
+		 margin-left: calc(-60px + 60 * ((100vw - 320px) / (1920 - 320)));	
+		
+				
+		
+		 color:#000;
+	     text-align: center;
+  		 font-family: 'Roboto Italic';
+		 font-size: calc(14px + 20 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 34 min */
+		
+		
+	}
+	
+	.fullprice{
+		font-weight: bolder;
+		font-size: calc(16px + 22 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 38 16px*/
+		
+	}
+	
+	.orderbutton{
+		 font-weight: bolder;			
+		/*max 32 14*/
+		
+		 text-decoration: none;
+		 padding: 10px 50px;
+		/*max 50 min*/
+		padding-left:calc(5px + 45 * ((100vw - 320px) / (1920 - 320)));
+		padding-right:calc(5px + 45 * ((100vw - 320px) / (1920 - 320)));	
+		
+		font-size: calc(15px + 35 * ((100vw - 320px) / (1920 - 320)));	
+
+		 margin: 10px 0px 0px 0px;		 
+		 border:solid 5px #000;
+		 border-color:#000000;
+		 color:#fff;
+		 background:#000;
+		 cursor: default;
+		
+		
+	}
+	
+	.orderbuttonAct{}
+	
+	.orderbuttonAct:hover, .orderbuttonAct:active
+		{	color: #121212;
+			background:#fff;
+		}
+	
+	.orderbutton.active{
+		cursor: pointer;
+	}
+	
+	
+	
+	/*СТРАНИЦА ЗАКАЗА*/
+	
+	.Bool{
+		font-weight: bold;
+	}
+	
+	.Order_modal{
+		z-index: 7;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%);		
+		margin: 0 auto;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		max-width: calc(230px + 570 * ((100vw - 320px) / (1920 - 320)));	
+		
+		/*max 800px*/
+		background:#E9E9E9;
+		border: 5px solid;
+		padding: 20px;
+		padding-top: 50px;
+		
+		transition: .95s opacity, .95s visibility;
+		visibility:hidden;
+		opacity: 0;
+		/*НЕ ЗАБЫТЬ*/
+	}
+
+	.Order_modal.vis{
+		opacity: 1;
+   		visibility: visible;
+	}
+	
+	
+	.Modal_top{
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		
+	}
+	
+	.Modal_content_title{
+		  font-family: 'Bangers', cursive;
+		  color: #121212;
+		  text-decoration: none;
+		  background-color:#fff;	
+		  display: flex; 
+		  justify-content: center; 
+		  align-items: center;
+		  font-size: calc(24px + 6 * ((100vw - 320px) / (1920 - 320)));	
+			/*30 max */
+		  
+  		  border:solid 3px #000;
+		  border-color:#000000;
+  		  margin:0 auto;
+		  margin-bottom: 20px;
+  		  padding:5px 10px 10px;
+		  background:#fff;
+		  box-shadow:0 6px 6px -6px #000;
+	}
+	
+	.Modal_content_info{
+		
+		background-color:#fff;
+  		border:solid 4px #000;
+		border-radius: 50px;
+  		box-shadow:0 6px 6px -6px #000;
+		padding: 10px 20px 10px 20px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		
+		color:#000;
+	    text-align: center;
+  		font-family: 'Source Sans Pro', sans-serif;
+		font-size: calc(14px + 6 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 20 min 14*/
+		
+		
+	}
+	
+	.Modal_content_info span{
+		calc(12px + 6 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 18 min 12*/
+		
+	}
+	/*КНОПКА*/
+	.Order_modal_open{
+		position: relative;
+		font-size: calc(14px + 4 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 18 min */
+		
+		font-family: 'SF', cursive;
+		border: none;
+		background-color: transparent;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	
+	.Order_modal_open::after{
+		content: "";
+		position: absolute;
+		right: -10px;
+		top: 12px;
+		width: 10px;
+		height: 10px;
+		
+		background-image: url("../img/Arrow.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		transform: rotate(90deg);
+		transition: all ease 0.4s;
+	}
+	
+	.Order_modal_open.Open::after{
+		transform: rotate(0deg);
+	}
+	
+	/*Сужаем фомру*/
+	.Form_padding{
+		padding: 0 80px;
+	}
+	
+	.Order_label{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 15px;
+		margin-left:calc(-80px + 80 * ((100vw - 320px) / (1920 - 320))); 	
+		
+		/*max 0 min -50*/
+		/*как отображать пробелы между словами*/
+		white-space: nowrap;
+	}
+	
+	.Order_input{
+		border-radius: 30px;
+		background:#fff;
+		 /*max 5px min 2px*/	
+  		border: calc(2px + 3 * ((100vw - 320px) / (1920 - 320))) solid;
+  		/*max 19.2px min 14px*/	
+  		font-size: 14px;
+		padding: 0px 5px;
+		margin-right: calc(-70px + 50 * ((100vw - 320px) / (1920 - 320)));	
+		/*max -20 min */
+		
+		/*100px min 240px max*/
+		width: calc(100px + 220 * ((100vw - 320px) / (1920 - 320)));	
+		
+		
+		
+		
+		height: 30px;
+		font-family: 'SF', cursive;
+		box-shadow:0 6px 6px -6px #000;
+	}
+	/*Цвет плейсхолдеров*/
+	.Order_input::placeholder{
+		color: #B1b1b1;
+	}
+	.Order_input:focus{
+	box-shadow: 0 0 8px 0 #debb62;
+	}
+	
+	input {outline:none;}
+	
+	textarea.Order_input{
+	/*max 100px min 40px*/	
+	min-height: 120px;
+	width: 700px;
+	border-radius: 20px;	
+	resize:none;
+	font-size: 16px;
+	font-family: 'SF', cursive;
+	box-shadow:0 6px 6px -6px #000;
+	}
+	
+	textarea {outline:none;}
+	
+	.Order_but{
+		 
+		 font-weight: bolder;
+		 font-size: calc(16px + 16 * ((100vw - 320px) / (1920 - 320)));	
+		/*max 32 min */
+		
+		 text-decoration: none;
+		
+		 padding: 10px 50px;
+		 position: relative;
+		 left: 50%;
+		 transform: translate(-50%, 0);
+		
+		 border:solid 5px #000;
+		 border-color:#000000;
+		 color:#fff;
+		 background:#000;
+		 cursor: pointer;
+	}
+	.Order_but:hover, .Order_but:active
+		{	color: #121212;
+			background:#fff;
+		}
+	
+	
+	/*САМИ ТОВАРЫ ВНУТРИ СОСТАВА ЗАКАЗА*/
+	
+	.Order_modal_list{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+		/*К сожалению скрол не рубит для 
+		моего стиля оформления*/
+		/*max-height: 300px;*/
+		display: none;
+		/*Изначально скроем*/
+		
+	}
+	
+	
+	
+	
+	/*Обернули LI в точки*/
+	.Order_modal_item{
+		border-bottom:dotted 2px #000;
+		border-bottom-width: calc(4px + 1 * ((100vw - 320px) / (1920 - 320)));	
+		width: calc(180px + 220 * ((100vw - 320px) / (1920 - 320)));	
+		padding-bottom: 10px;
+		padding-top: 10px;
+		margin-left: calc(-40px + 40 * ((100vw - 320px) / (1920 - 320)));			
+
+	}
+	/*Сверху у первого элемента вешаем обводку*/
+	.Order_modal_item:first-child{
+		border-top:dotted 2px #000;
+		border-top-width: calc(4px + 1 * ((100vw - 320px) / (1920 - 320)));	
+		width: calc(180px + 220 * ((100vw - 320px) / (1920 - 320)));			
+		padding-top: 10px;
+		margin-left: calc(-40px + 40 * ((100vw - 320px) / (1920 - 320)));							
+	}
+	
+	.Order_product{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.Order_product_img{
+		max-width:calc(70px + 30 * ((100vw - 320px) / (1920 - 320)));	
+		max-height:calc(70px + 30 * ((100vw - 320px) / (1920 - 320)));	
+		object-fit: cover;
+		margin-left: 5px;
+		border-color:#FFFFFF;		
+		border: 4px solid;
+		
+	}
+	
+	
+	.Order_product_title{
+		font-family: 'Bangers', cursive;
+		font-size: calc(16px + 4 * ((100vw - 320px) / (1920 - 320)));	
+		font-weight: 100;
+		margin-bottom: 5px;
+	}
+	
+	.Order_product_price{
+		font-family: 'Bangers', cursive;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	
+	.Order_product_text{
+		margin-right: 10px;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+	
+	
+

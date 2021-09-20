@@ -1,0 +1,1475 @@
+@import "global.css";
+@import "simplebar.css";
+
+
+
+@font-face {
+    font-family: 'SF Comic Script';
+    src: url("../fonts/sf-comic-script_6475058107889f1b8e2145901cc241ae.ttf") format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+	
+	
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("../fonts/SourceSansPro-It.otf") format('truetype');  
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Roboto Italic";
+	src: url("../fonts/Roboto-Italic.ttf") format('truetype');  
+	font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+@media (max-width: 320px){
+  
+}
+
+@media (max-width: 981px){
+
+}
+
+
+@media (max-width: 1700px){
+}
+
+@media (max-width: 1920px){
+	a.main-buttons {
+	/*ГЛАНВЫЕ КНОПКИ*/
+		
+  /*Цвет кнопок*/
+  background:#E9E9E9;
+  /*Off подчеркивание*/
+  text-decoration: none;
+  /*Цвет текста*/
+  color:#000000;
+  display: inline-block;
+  float: left;
+  border-color:#000000;
+  letter-spacing: 2px;
+  font-family: 'Bangers', cursive;	
+  font-weight: bold;
+  overflow: hidden;	
+ 			
+	
+  
+  /*ДЛЯ АДАПТАЦИИ*/
+ 
+  /*Исходник:
+	calc(minpx + (max-min) * ((100vw - 320px) / (1920 - 320)));*/
+   		
+  /*max - 5  min - 4*/
+  border: calc(4px + 1 * ((100vw - 320px) / (1920 - 320))) solid;
+  
+  /*Макс размер - 22, а минимум - 14*/
+  font-size: calc(14px + 8 * ((100vw - 320px) / (1920 - 320)));	 
+  		
+  /*Больш 150 минимум 100*/
+  width: calc(100px + 50 * ((100vw - 320px) / (1920 - 320)));	
+		
+  /*max 30  min 20*/		
+  height: calc(20px + 10 * ((100vw - 320px) / (1920 - 320)));
+  
+  /*max 15  min 5*/	
+  padding-bottom: calc(5px + 10 * ((100vw - 320px) / (1920 - 320)));
+  /*max 30  min 5*/			
+  padding-left:  calc(5px + 25 * ((100vw - 320px) / (1920 - 320)));
+  /*max 30  min 5*/			
+  padding-right: calc(5px + 25 * ((100vw - 320px) / (1920 - 320)));
+  /*max 15  min 5*/			
+  padding-top: calc(5px + 10 * ((100vw - 320px) / (1920 - 320)));
+		
+  /*max 120  min 0*/			
+  margin-right: calc(0px + 120 * ((100vw - 320px) / (1920 - 320)));		
+  /*max 40  min 0*/		
+  margin-left: calc(0px + 40 * ((100vw - 320px) / (1920 - 320)));		
+  margin-top: 0px;
+  /*МОЖЕТ УВЕЛИЧИТЬ*/		
+  
+	}
+	
+	nav.fixed-nav-bar{
+	position: fixed;   
+	top: -1px;   
+	left: 0;   
+	z-index: 6;   
+	width: 100%;
+	height: calc(72px + 28 * ((100vw - 981px) / (1920 - 981)));	
+	/*max 100  min 72*/		
+	background-image:url("../img/Comic Texture1.svg");
+	background-color: #000;
+	display: inline-block;
+	background-position: top;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+		
+	/*max 40  min 65*/			
+	background-size: calc(65% + (40-65) * ((100vw - 320px) / (1920 - 320)));
+	
+}
+	nav .main-buttons:hover, .main-buttons:active { 
+	background:#FFFFFF;
+}
+	
+	
+	ul.fix{
+		/*По центру ul */
+		/*max 20  min 11*/			
+		margin-top: calc(11px + 9 * ((100vw - 320px) / (1920 - 320)));
+		
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding: 0px 0px 0px 0px;	
+		
+	}
+	li{
+		/*max 0  min 5*/			
+		padding-top: calc(5px - 5 * ((100vw - 320px) / (1920 - 320)));
+		/*max 0  min 10*/	
+		padding-right: calc(10px - 10 * ((100vw - 320px) / (1920 - 320)));
+		/*max 0  min 10*/	
+		padding-left: calc(10px - 10 * ((100vw - 320px) / (1920 - 320)));
+		padding-bottom: 0px;
+	    
+		/*max -4  min -9*/	
+		margin-top: calc(-9px + 5 * ((100vw - 320px) / (1920 - 320)));
+		/*max 0  min 10*/		
+		margin-bottom: calc(10px - 10 * ((100vw - 320px) / (1920 - 320)));
+		margin-left: 0px;
+		margin-right: 0px;
+		
+		display: inline-block;
+	    text-align: center;
+	}
+	
+	
+	
+	/*Справа кнопка музыки*/
+	.MusBut {
+		filter: 
+		drop-shadow(0px 0px 0px rgba(0,0,0,0.7));
+		float: right;
+	    position: relative;
+		/*ДЛЯ АДАПТАЦИИ*/
+		/*max -70  min -62*/		
+		top:  calc(-62px - 10 * ((100vw - 1400px) / (1920 - 1400)));
+		/*max 10  min 4*/		
+		right: calc(4px + 6 * ((100vw - 1200px) / (1920 - 1200)));
+		margin: 0 auto;
+		/*max 85  min 65*/		
+		width: calc(65px + 20 * ((100vw - 1200px) / (1920 - 1200)));
+		/*max 70  min 50*/	
+    	height: calc(50px + 20 * ((100vw - 1200px) / (1920 - 1200)));
+		
+		transform: scale(0.9);
+		/*Делаем задник прозрачным*/
+		background-color: Transparent;
+		/*Устанавливаем форму курсора*/
+		cursor: pointer;
+		/*Убираем НАДОЕДЛИВУЮ ГРАНИЦУ*/
+		border: 0;
+    }
+
+		.MusBut:hover { 
+
+		transform: scale(1);
+	}
+
+	.MusBut:before { 
+	content: "";
+	left: -2px;
+	top: -13px;
+	border: 5px solid;
+	
+	/*max 80  min 62*/		
+	height: calc(62px + 18 * ((100vw - 1200px) / (1920 - 1200)));
+	/*max 80  min 62*/	
+	width: calc(62px + 18 * ((100vw - 1200px) / (1920 - 1200)));
+	position: absolute;
+	background:#fff;
+	/*За родителям будет*/
+	z-index: -1;
+	}
+	
+	/*Слева лого*/
+ 	nav .Logo {	
+	 	
+	 	/*https://css-tricks.com/almanac/properties/i/image-rendering/*/
+  		image-rendering: crisp-edges;
+	 
+	 	/*rgba - настройка цвета и насыщенности;
+		сдвиг вправо,вверх и размытие*/
+	 	/*Выделили словно обводкй нашего перса
+	 	не используя смещение в x y и минимум блюра*/
+		filter: 
+			drop-shadow(-1px 1px 1px rgba(0,0,0,0.7))
+			brightness(0%);
+		float: left;
+	 	
+	 	transition: all 1s ease;   
+		
+	 	/*ДЛЯ АДАПТАЦИИ*/
+		/*max 10  min 5*/	
+	  	margin-top: calc(5px + 5 * ((100vw - 1200px) / (1920 - 1200)));
+		/*max 15  min 5*/		
+	 	margin-left: calc(5px + 10 * ((100vw - 1200px) / (1920 - 1200)));
+		/*max 22  min 24*/
+	 	margin-right: calc(-24px + 2  * ((100vw - 1200px) / (1920 - 1200)));
+    }
+
+nav .Logo:hover, .Logo:active { 
+		transform: scale(0.9);
+		filter: 
+			drop-shadow(-1px 1px 1px rgba(0,0,0,0.7))
+			brightness(90%);
+}
+
+
+.Logo img{
+	/*ДЛЯ АДАПТАЦИИ*/
+	width: calc(75px + 10  * ((100vw - 1200px) / (1920 - 1200)));
+	height: calc(75px + 10  * ((100vw - 1200px) / (1920 - 1200)));
+	/*max 85  min 70*/
+	
+}
+	
+
+/*НАЗВАНИЕ*/
+
+.intro {
+	display: table;
+	width: 100%;
+	
+	}
+
+.intro-text pre {
+	
+	font-family: 'SF Comic Script' ;
+	color: #fff;
+	
+	font-weight: 400;
+	margin:0px 0px 0px 0px;
+	
+	/*max 208  min 80*/
+	font-size: calc(80px + 128 * ((100vw - 320px) / (1920 - 320)));	
+	
+	/*Расстояние между строками*/
+	line-height: 0.8em;
+	
+	/*Эффекты для названия*/
+	
+	/*max 4  min 3*/
+	-webkit-text-stroke: calc(2px + 2 * ((100vw - 320px) / (1920 - 320))) black;
+	
+	text-shadow: 4px 2px 0px black;
+}
+
+
+header .intro-text {
+	padding-top: 150px;
+	padding-bottom: 60px;
+
+}
+	
+/*ЗАДНИК*/	
+  .background-image {
+  position:absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-image:url("../img/BG_2.jpg");
+  width: 100%;
+  height: 100%;
+	/*Регулируем расположение*/
+  background-position:top;
+	  
+  background-size:calc(600px + 1320 * ((100vw - 320px) / (1920 - 320))) calc(785px + 530 * ((100vw - 320px) / (1920 - 320)));	  
+  /*max 1920  min 600*/			
+  /*max 1080  min 550*/		  
+	
+}
+	
+	
+ 
+/*https://html5css.ru/howto/howto_css_loader.php*/
+
+/*LOADER ANIMATION*/
+#Loader {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+	
+  /*ДЛЯ АДАПТАЦИИ*/	
+  width: calc(120px + 100 * ((100vw - 320px) / (1920 - 320)));
+  height: calc(120px + 100 * ((100vw - 320px) / (1920 - 320)));  
+  /*max 220  min 120*/			
+  /*max 220  min 120*/	
+	
+  /*расположение по центру*/
+  margin-bottom: 0px;
+  margin-right: 0px;
+  /*max350px   min 115px*/
+  margin-top: calc(115px + 235 * ((100vw - 320px) / (1920 - 320)));  
+  /*max -125px  min -75*/  	
+  margin-left: calc(-75px - 50 * ((100vw - 320px) / (1920 - 320))); 
+  
+	
+	
+  /*Главный белый круг*/
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  /*Змейка черная*/
+  border-top: 16px solid #000000;
+  /*Скорость анимации*/
+ -webkit-animation: spin 1.7s linear infinite;
+  animation: spin 1.7s linear infinite;
+
+  background-image:url("../img/Logo_loader.svg");
+  background-repeat: no-repeat;
+  
+  /*ДЛЯ АДАПТАЦИИ*/	
+  background-size: calc(80px + 120 * ((100vw - 320px) / (1920 - 320))) calc(100px + 60 * ((100vw - 320px) / (1920 - 320)));
+  background-position:calc(40% - 10 * ((100vw - 320px) / (1920 - 320))) calc(45% + 10 * ((100vw - 320px) / (1920 - 320)));
+  /*max 20  min 40*/			
+  /*max 50  min 45*/		
+	
+  image-rendering: auto;	
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Всплывание страницы после Лоадера*/
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatebottom;
+  animation-duration: 0.5s
+}
+
+@-webkit-keyframes animatebottom {
+  0% { bottom:-50px; opacity:0 } 
+  100% { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  0% { bottom:-50px; opacity:0 } 
+  100% { bottom:0; opacity:1 }
+}
+
+/*Заранее нет главной страницы*/
+#wrapper {
+  display: none;
+  text-align: center;
+}	
+	
+	
+  
+/*SLIDER*/
+
+/* стили для корневого элемента слайдера */
+.Slider {
+  position: relative;
+  overflow: hidden;
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+  max-width: 1200px;
+  
+}
+
+/* стили для контейнера слайдов */
+#Slider_wrapper {
+
+	background-color: #000;
+    position: relative;
+
+	
+	/*max 563 min 200*/
+	height: calc(200px + 600 * ((100vw - 320px) / (1920 - 320)));	
+	
+	
+    padding: 0px;
+    margin: 0px;
+   
+}
+.Slider_item {
+	
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+	z-index: 1;
+    /*Дял плавности перехода(исчезновения)
+	используется анимация: изначально непрозрачность 0,
+	а далее за промежуток времени возрастает
+	до полной видимости*/
+	opacity: 0;
+	/*Анимация*/
+    -webkit-transition: opacity 1.3s;
+    -moz-transition: opacity 1.3s;
+    -o-transition: opacity 1.3s;
+    transition: opacity 1.3s;
+}
+
+/*Проявляет слайд*/
+.Showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+/*Каждый слайд*/
+.Slider_item:nth-of-type(1) {
+    background-image:url("../img/Slide/Pizza.jpg");
+	background-position:  top; 
+	background-size: 100% 105%;
+}
+.Slider_item:nth-of-type(2) {
+   background-image:url("../img/Slide/Pancake.jpg");
+   background-position:  top; 
+   background-size: 110% 110%;
+}
+.Slider_item:nth-of-type(3) {
+	background-image:url("../img/Slide/Sausage.jpg");    
+	background-position:  center; 
+	background-size: 110% 100%;
+}
+.Slider_item:nth-of-type(4) {
+	background-image:url("../img/Slide/Kanafeh.jpg");
+	background-position:center; 
+	background-size: 110% 110%;
+}
+	
+
+/*ЛИНИИ*/	
+/*https://frontblog.ru/verstka-zagolovoka-s-liniyami-po-bokam-na-css.html*/
+.Lines {
+	font-family: 'Bangers', cursive;;
+	color: #000000;
+	
+	/*ДЛЯ АДАПТАЦИИ*/
+	/*max 64px min 25px*/
+	font-size: calc(25px + 39 * ((100vw - 320px) / (1920 - 320)));
+	font-weight: bold;
+	
+	padding: 30px 0px 0px 0px;
+	margin:0px 0px 0px 0px ;
+    /* Чтобы спрятать часть линий, которые 
+    ** будут вылазить за пределы блока */
+    overflow: hidden;
+    /* Выравнивание заголовка по центру, 
+    ** можно использовать left, right */
+    text-align: center;
+    /* Тут можно добавить другие стили для заголовка */
+
+}
+
+.Lines:before,
+.Lines:after {
+    /* Обязательно указываем пустое свойство content, 
+    ** иначе псевдоэлементы не появятся на сайте */
+    content: "";
+    /* Указываем что наши линии будут строчно-блочные и 
+    ** выравнивание по высоте - по центру */
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    
+	
+	
+	/*max 38 min 22*/
+	width: calc(22% + 280 * ((100vw - 320px) / (1920 - 320)));
+    height: 4px;
+	
+	/*max 3 min 1*/
+	border: calc(1px + 2 * ((100vw - 320px) / (1920 - 320))) solid;
+	
+	border-radius: 40px;
+    /* Добавляем цвет для линии */
+    background-color: #000000;
+    /* Добавляем пседоэлемантам возможность изменить 
+    ** позицию линии, для создания отступов от текста */
+    position: relative;
+}
+.Lines:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия 
+    ** встала рядом с текстом слева */
+    margin-left: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    left: -14px;
+}
+.Lines:after {
+    /* Смещаем правую линию на 100% вправо, чтобы 
+    ** линия встала рядом с текстом справа */
+    margin-right: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    right: -14px;
+}
+	
+	
+/*SECTION*/
+
+section.services {
+	height: 530px;
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+	
+}
+
+
+.services .service-item  a {
+	text-decoration: none;
+}
+
+.services .service-item {
+	text-align: center;
+}
+
+.services .service-item img {
+	
+	border-radius: 50%;
+	max-width: 250px;
+}
+
+
+h4 {
+	margin-top: 10px;
+	color: #121212;
+	font-family: 'Bangers', cursive;
+	
+	/*max 28 min 24px*/
+	font-size: calc(24px + 4 * ((100vw - 320px) / (1920 - 320)));
+	font-weight: 600;
+}
+
+
+/*https://fls.guru/cssanimation.html*/
+
+/*Анимация UpDown*/
+	
+.service-item{
+	transition-property: all;
+  	transition: all ease 2s;
+	}
+	
+.service-item:hover{ 
+	
+	 transform: translateY(10px);
+}	
+
+		
+/*ЯЧЕЙКИ РАЗДЕЛОВ*/
+.roow {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.col {
+    float: left;
+	/*max 50 min 40*/	
+    padding: calc(40px + 10 * ((100vw - 1020px) / (1920 - 1020)));	
+	width: 100%;
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+	
+	
+	
+/*ФОРМА ДЛЯ ОТПРАВКИ СООБЩЕНИЯ*/
+.FormBack{
+	background-color:#fff;
+	padding: 50px 0px 50px 0px ;
+	
+}
+/*Само окно!*/
+.form{
+	background:#E9E9E9;
+  	border: 5px solid;
+ 	border-radius: 80px;
+
+	/*Размер окна формы*/
+	/*max 700 min 250*/
+	max-width: calc(250px + 450 * ((100vw - 320px) / (1920 - 320)));	
+	/*max 800 min 400px*/
+	max-height: calc(400px + 400 * ((100vw - 320px) / (1920 - 320)));	
+	
+	/*По середине будет*/
+	margin: 0 auto;
+	color:#000000;
+	padding-bottom: 50px;
+}
+
+
+.Smart{
+	/*max 700 min 250*/
+	max-width: calc(250px + 450 * ((100vw - 320px) / (1920 - 320)));	
+	/*max 800 min 400px*/
+	max-height: calc(400px + 400 * ((100vw - 320px) / (1920 - 320)));	
+	
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/*Псевдоэлементы - имитация смартфона*/
+/*Для центирования псевдоэлемента, чтоб не ездил туда сюда 
+при изменении размеров страницы, самому элементу задаем
+position: relative; , а псевдо position: absolute;*/
+.Smart::before{
+	content: "";
+	/*max 16px min 3*/	
+	width: calc(3px + 13 * ((100vw - 320px) / (1920 - 320)));	
+	/*max 16px min 3*/
+	height: calc(3px + 13 * ((100vw - 320px) / (1920 - 320)));	
+	
+	border: 3px solid #000;
+    border-radius: 0.8em;
+	background-color: #000;
+	position: absolute;
+	
+	/*max 13px min 14*/
+	top: calc(14px - 2 * ((100vw - 320px) / (1920 - 320)));
+	/*max 160 min 65px*/
+	right: calc(65px + 95 * ((100vw - 320px) / (1920 - 320)));
+}
+/*Псевдоэлементы - имитация смартфона*/
+.Smart::after{
+	content: "";
+
+	/*max 150px min 60px*/
+	width: calc(60px + 90 * ((100vw - 320px) / (1920 - 320)));
+	/*max 4px min 0*/
+	height: calc(0px + 4 * ((100vw - 320px) / (1920 - 320)));
+	
+	border: 2px solid #000;
+    border-radius: 0.8em;	
+	background-color: #000;
+	position: absolute;
+	
+	top: 17px;
+	/*max 270px min 92px*/
+	left: calc(92px + 178 * ((100vw - 320px) / (1920 - 320)));
+}
+
+/*Обратился ко всем объектам form и убираем обводку вокруг полей*/
+.form * {
+	outline: none;
+}
+
+
+.form_body{
+	padding: 30px;
+	position: relative;
+}
+	
+	
+/*Лоадер при отправке письма*/
+.form_body::after{
+
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+	
+  /*ДЛЯ АДАПТАЦИИ*/	
+  width: calc(120px + 100 * ((100vw - 320px) / (1920 - 320)));
+  height: calc(120px + 100 * ((100vw - 320px) / (1920 - 320)));  
+  /*max 220  min 120*/			
+  /*max 220  min 120*/	
+	
+ /*расположение по центру*/
+   margin: -75px 0px 0 -75px;
+	
+  /*расположение по центру*/
+  margin-bottom: 0px;
+  margin-right: 0px;
+  /*max -150  min -75px*/	
+  margin-top: calc(-75px - 75 * ((100vw - 320px) / (1920 - 320)));  
+  /*max -120  min -75px*/	 	
+  margin-left: calc(-75px  - 45 * ((100vw - 320px) / (1920 - 320))); 
+
+  /*Главный белый круг*/
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  /*Змейка черная*/
+  border-top: 16px solid #000000;
+  /*Скорость анимации*/
+  animation: spin 1.7s linear infinite;
+  background-image:url("../img/Logo_loader.svg");
+  background-repeat: no-repeat;  
+  /*ДЛЯ АДАПТАЦИИ*/	
+  background-size: calc(80px + 120 * ((100vw - 320px) / (1920 - 320))) calc(100px + 60 * ((100vw - 320px) / (1920 - 320)));
+  background-position:calc(40% - 10 * ((100vw - 320px) / (1920 - 320))) calc(45% + 10 * ((100vw - 320px) / (1920 - 320)));
+  /*max 20  min 40*/			
+  /*max 50  min 45*/			
+  image-rendering: auto;		
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+	.form_body._sending::after{
+	opacity: 1;
+	visibility: visible;
+}
+	
+
+/*Для затемнения экрана при отправке сообщения*/	
+.over{
+ 
+   
+  transition: all 0.5s ease 0s;
+}
+	.over.act{
+  z-index: 7;
+  background-color: #000; 
+  height: 100%; 
+  width: 100%; 
+  left: 0; 
+  opacity: 0.3; /* Степень прозрачности */ 
+  top: 0;  
+		
+}
+
+.over2{
+ 
+}  
+.over2.act{
+ z-index: 3;
+	pointer-events: none;
+}  
+
+
+
+.Smart2{
+	/*max 700 min 250*/
+	max-width: calc(250px + 450 * ((100vw - 320px) / (1920 - 320)));	
+	/*max 800 min 400px*/
+	max-height: calc(400px + 400 * ((100vw - 320px) / (1920 - 320)));	
+	
+	/*По середине будет*/
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/*Линия разделения экрана сверху*/
+.Smart2::before{
+	content: "";
+	
+	/*max 690 min 235*/
+	width: calc(235px + 455 * ((100vw - 320px) / (1920 - 320)));
+	
+	height: 2px;
+	border: 1px solid #000;
+    border-radius: 0.8em;
+	
+	background-color: #000;
+	position: absolute;
+
+	/*max 5 min 5 calc(5px + -50 * ((100vw - 320px) / (1920 - 320))); */
+	right: 5px;
+	/*max 40 min 35*/	
+	top: calc(35px + 5 * ((100vw - 320px) / (1920 - 320)));
+	
+}
+
+/*Линия разделения экрана снизу*/
+.Smart2::after{
+	content: "";
+	
+	/*max 705px min 255px*/
+	width: calc(255px + 450 * ((100vw - 320px) / (1920 - 320)));
+	
+	height: 2px;
+	border: 1px solid #000;
+    border-radius: 0.8em;	
+	background-color: #000;
+	position: absolute;
+	
+	
+	
+	/*max 540px min 360px*/
+	top: calc(360px + 180 * ((100vw - 320px) / (1920 - 320)));
+	/*max -5px min -5px*/
+	left: -5px;
+}
+
+/*Главная надпись сверху*/
+.form_title{
+	font-family: 'Bangers', cursive;;
+	color: #000000;
+	
+	
+	/*max 35.2px min 20px*/
+	font-size: calc(20px + 15.2 * ((100vw - 320px) / (1920 - 320)));
+	/*max 20px min 10px*/
+	margin-bottom: calc(10px + 10 * ((100vw - 320px) / (1920 - 320)));
+
+	/*Когда будет меньше и плохо виден без жирности - добавить в @media*/
+	font-weight: 200;
+}
+
+.form_item{
+	/*max 20px min 10px*/	
+	margin-bottom: calc(10px + 10 * ((100vw - 320px) / (1920 - 320)));	
+}
+
+/*Настройки самих имен полей*/
+.form_label{
+	/*По центру и в ряд все-все*/
+	display: block;
+	
+	/*max 24px min 16px*/
+	font-size: calc(16px + 8 * ((100vw - 320px) / (1920 - 320)));
+	/*max 10px min 5px*/
+	margin-bottom: calc(5px + 5 * ((100vw - 320px) / (1920 - 320)));
+	
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.form_input{
+	 /*Цвет кнопок*/
+  background:#E9E9E9;
+  
+  /*max 5px min 2px*/	
+  border: calc(2px + 3 * ((100vw - 320px) / (1920 - 320))) solid;
+  /*max 19.2px min 14px*/	
+  font-size: calc(14px + 5.2 * ((100vw - 320px) / (1920 - 320)));
+  
+  border-radius: 30px;
+  width: 80%;
+  padding: 0px 20px;	
+  transition: all 0.3s ease 0s;
+}
+
+
+/*При перемещении за счет клавы(таба) по элементам - будет золотая подсветка*/
+.form_input:focus{
+	box-shadow: 0 0 8px 0 #debb62;
+}
+
+/*Стилизация при ошибке*/
+.form_input._Error{
+	box-shadow: 0 0 15px #FF0000;
+}
+
+textarea.form_input{
+	/*max 100px min 40px*/	
+	min-height: calc(40px + 60 * ((100vw - 320px) / (1920 - 320)));
+	
+	border-radius: 20px;	
+	resize:none;
+}
+	
+/*Убрать полосу прокрутки у элемента*/
+.form_input::-webkit-scrollbar {
+  width: 0;
+}	
+
+/*Скрыт*/
+.checkbox{
+	
+}
+/*Горит красным, если не нажата*/
+.checkbox._Error .checkbox_label::before{
+	box-shadow: 0 0 15px #FF0000;
+}
+
+
+.checkbox_input{
+	display: none;
+}
+
+/*Появление галочки после нажатия*/
+.checkbox_input:checked + .checkbox_label::after{
+	/*transition: 0.5s;*/
+	transform: scale(1);
+}
+
+
+/*Надпись после чекбокса*/
+.checkbox_label{
+
+	/*max 19.2px min 14px*/
+	font-size: calc(14px + 5.2 * ((100vw - 320px) / (1920 - 320)));
+	
+	line-height: 120%;	
+	font-family: 'Source Sans Pro', sans-serif;
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+/*https://freefrontend.com/css-checkboxes/*/
+/*Рисуем свой значок*/
+.checkbox_label::before{
+	content: "";
+	align-self: flex-start;
+
+	width: 16px;	
+	/*max 16px min 8px*/
+	height: calc(8px + 8 * ((100vw - 320px) / (1920 - 320)));
+	
+	border: 2px solid #000;
+    border-radius: 0.25em;	
+	margin-bottom: 0px;
+	
+	
+	/*max 0px min 5.6px*/
+	margin-left: calc(5.6px - 5.6 * ((100vw - 320px) / (1920 - 320)));
+	/*max 0px min 2px*/
+	margin-top: calc(2px - 2 * ((100vw - 320px) / (1920 - 320)));
+	/*max 5px min -5px*/
+	margin-right: calc(-5px + 10 * ((100vw - 320px) / (1920 - 320)));
+	
+}
+/*Галочка*/
+.checkbox_label::after{	
+	content: "";
+	
+	/*max 10px min 6px*/
+	width: calc(6px + 4 * ((100vw - 320px) / (1920 - 320)));
+	/*max 10px min 6px*/
+	height: calc(6px + 4 * ((100vw - 320px) / (1920 - 320)));
+	
+	position: absolute;
+	top: 5px;	
+	/*max 5px min 8px*/
+	left: calc(8px - 3 * ((100vw - 320px) / (1920 - 320)));
+	
+	background-color: #000;
+	border-radius: 8px;
+
+	/*Анимация появления*/
+	transition: transform 0.3s ease 0.1s;
+	/*Скрываем изначально*/
+	transform: scale(0);
+}
+
+
+
+/*Кнопка*/
+.form_button{
+	position: relative;
+	background-color: #EBE7E7;
+	background-image:url("../img/send.svg");
+	background-repeat: no-repeat;
+	background-position: 5px 0px;
+	width: 25%;
+	border-radius: 50%;
+	
+	/*max 120px min 30px*/ /*max 160px min 50px*/
+	background-size: calc(30px + 90 * ((100vw - 320px) / (1920 - 320))) 
+					 calc(50px + 110 * ((100vw - 320px) / (1920 - 320)));
+		
+	/*max 155px min 50px*/
+	min-height: calc(50px + 105 * ((100vw - 320px) / (1920 - 320)));
+	/*max 5px min 2px*/
+	border: calc(2px + 3 * ((100vw - 320px) / (1920 - 320))) solid;
+	/*max 52px min 20px*/ 
+	top: calc(20px + 45 * ((100vw - 320px) / (1920 - 320)));
+	
+	/*font-family: 'Source Sans Pro', sans-serif;*/
+	cursor: pointer;
+	transition: background-color 0.5s ease 0s;
+}
+
+/*При наведении*/
+.form_button:hover{
+	background-color: #fff;
+}
+
+/*После нажатия - опускается*/
+.form_button:active{
+	/*max 67 min 25px*/
+	top: calc(25px + 42 * ((100vw - 320px) / (1920 - 320)));
+}
+
+	
+/*ПОДВАЛ НАЧАЛО*/
+footer{
+	text-align: center;
+	font-family: 'Bangers', cursive;	
+	background: #262626;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-left: 25px;	
+
+	/*max 10px min 0px*/
+	padding-bottom: calc(0px + 10 * ((100vw - 320px) / (1920 - 320)));
+	
+	/*max 18px min 12px*/
+	font-size: calc(12px + 6 * ((100vw - 320px) / (1920 - 320)));
+	  
+	color: #FFFFFF;	
+}
+	
+.roow2{	
+	display: flex;
+  	flex-direction: row;
+}
+	
+.col2 {
+    float: left;
+   	width: 100%;
+}	
+
+.col_copy p{
+	/*max 17.6px min 12px*/	
+	font-size: calc(12px + 5.6 * ((100vw - 320px) / (1920 - 320)));
+}
+
+.phone{
+	display: inline-block;
+    vertical-align: middle;
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 0.4em;
+	margin-bottom: 0.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ 	background-image:url("../img/phone.svg");
+}
+
+.call{
+	text-decoration: none;
+    color: white;
+	
+	/*max 17.6px min 12px*/
+    font-size: calc(12px + 5.6 * ((100vw - 320px) / (1920 - 320)));
+	
+    font-weight: 500;
+}
+
+
+.col_copy{
+  width: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+}
+.col_phone{
+  width: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+	
+}
+/*ПОДВАЛ КОНЕЦ*/
+
+	
+.about {
+	height: 500px;
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+	text-align: center;
+	font-family: 'Bangers', cursive;
+	padding-top: 10px;
+	padding-right: 0px;
+	
+
+	/*max 10px min 0px*/
+	padding-bottom: calc(0px + 10 * ((100vw - 320px) / (1920 - 320)));
+	
+	/*max 18px min 12px*/
+	
+	  
+	color: #000;	
+	
+}
+	.roow3{	
+	 display: flex;
+  	 flex-direction: row;
+	 height: 500px;
+	 padding-bottom: 10px
+}	
+	
+	.fixback{
+		
+	/*max 280px min 120px*/
+	width: calc(120px + 160 * ((100vw - 320px) / (1920 - 320)));
+	/*max 50px min -100px*/
+	margin-top: calc(-100px + 150 * ((100vw - 320px) / (1920 - 320)));
+		
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+
+	.fixback3{
+		
+	/*max 280px min 120px*/
+	width: calc(120px + 160 * ((100vw - 320px) / (1920 - 320)));
+	/*max 50px min -100px*/
+		
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+    position: relative;
+    left: 33%;
+	}
+
+	
+	
+}
+
+
+@media (min-width: 320px) and (max-width: 1020px){
+	
+	section.services{
+		/*max 1900px min 800px*/			
+		height: calc(800px + 1100 * ((100vw - 320px) / (1020 - 320)));
+}
+	
+	.services .service-item img {
+	
+	/*max 400 min 150px*/
+	max-width: calc(150px + 250 * ((100vw - 320px) / (1020 - 320)));
+}
+
+
+
+h4 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	color: #121212;
+	font-family: 'Bangers', cursive;
+	
+	/*max 50px min 22px*/
+	font-size: calc(22px + 28 * ((100vw - 320px) / (1020 - 320)));
+}
+	
+.roow {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.col {
+	
+	flex-grow:3;
+	/*max 50 min 10*/	
+	padding-top: calc(15px + 35 * ((100vw - 320px) / (1020 - 320)));
+	padding-right: 0px;
+	padding-bottom: calc(15px + 35 * ((100vw - 320px) / (1020 - 320)));
+	padding-left: 0px;
+	width: 50%;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 980px) {
+	
+	nav.fixed-nav-bar{
+
+	height: calc(100px + 35  * ((100vw - 320px) / (980 - 320)));
+	/*max 135px  min 100*/		
+		
+	}
+	
+	ul.fix{
+		/*По центру ul */
+		/*max 20  min 11*/			
+		margin-top: calc(11px + 9 * ((100vw - 320px) / (1920 - 320)));
+		
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: -10px;
+		padding: 0px 0px 0px 0px;	
+		
+	}
+	li{
+		/*max 0  min 5*/			
+		padding-top: calc(5px - 5 * ((100vw - 320px) / (1920 - 320)));
+		
+		/*max 0  min 10*/	
+		padding-right: calc(0px + 5.86875 * ((100vw - 320px) / (1920 - 320)));
+		/*max 5.86875px  min 0*/	
+		padding-left: calc(0px + 5.86875 * ((100vw - 320px) / (1920 - 320)));
+		padding-bottom: 0px;
+	    
+		
+		/*max -4  min -9*/	
+		margin-top: calc(-9px + 5 * ((100vw - 320px) / (1920 - 320)));
+		/*max 0  min 10*/		
+		margin-bottom: calc(10px - 10 * ((100vw - 320px) / (1920 - 320)));
+		margin-left: -10px;
+		margin-right: -10px;
+		
+	}
+	
+	a.main-buttons {
+	/*ГЛАВНЫЕ КНОПКИ*/
+		
+ 	 /*Цвет кнопок*/
+  	background:#E9E9E9;
+  	/*Off подчеркивание*/
+  	text-decoration: none;
+  	/*Цвет текста*/
+  	color:#000000;
+  	display: inline-block;
+  	float: left;
+  	border-color:#000000;
+  	
+	letter-spacing: 0px;
+		
+  	font-family: 'Bangers', cursive;	
+  	font-weight: bold;
+  	overflow: hidden;	 			
+	text-align: center;
+  /*ДЛЯ АДАПТАЦИИ*/
+ 
+  
+  /*Макс размер - 20, а минимум - 14*/
+  font-size: calc(14px + 6  * ((100vw - 320px) / (980 - 320)));		  
+ 
+  /*max 30  min 5*/	
+  padding-bottom:  calc(5px + 25 * ((100vw - 320px) / (980 - 320)));	
+  /*max 25  min 5*/			
+  padding-left:  calc(5px + 20 * ((100vw - 320px) / (980 - 320)));	
+  /*max 25  min 5*/			
+  padding-right: calc(5px + 20 * ((100vw - 320px) / (980 - 320)));	
+  /*max 15  min 5*/			
+  padding-top:  calc(5px + 25 * ((100vw - 320px) / (980 - 320)));	
+		
+  /*max 25  min 5*/		
+  margin-right: calc(5px + 20 * ((100vw - 320px) / (980 - 320)));		
+  
+  /*max 10  min 0*/		
+  margin-top: calc(0px + 10 * ((100vw - 320px) / (980 - 320)));		  
+  /*МОЖЕТ УВЕЛИЧИТЬ*/		
+  
+	}
+}
+
+@media (min-width: 320px) and (max-width: 666px){
+	a.main-buttons {
+	letter-spacing: 0px;
+	margin-right: 10px;
+    /*Макс размер - 17.1455px, а минимум - 14*/
+  	font-size: calc(14px + 3 * ((100vw - 320px) / (666 - 320)));	
+		
+  	width: 100px;	
+		
+	}
+	
+	nav.fixed-nav-bar{
+	
+		
+	height: calc(100px + 70 * ((100vw - 320px) / (666 - 320)));	
+		}
+ 		
+	
+	li{
+		
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+
+@media (min-width: 1200px) and (max-width: 1920px){
+	
+	.about {
+	height: 600px;
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+	text-align: center;
+	font-family: 'Bangers', cursive;	
+	padding-top: 10px;
+	padding-right: 0px;
+	
+
+	/*max 10px min 0px*/
+	padding-bottom: 10px;
+	
+	/*max 18px min 12px*/
+	font-size: calc(12px + 6 * ((100vw - 320px) / (1920 - 320)));
+	  
+	color: #000;	
+	
+}
+	
+	.aboutstyle{
+		border-color:#000000;		
+		border: 5px solid;
+		width: 700px;		
+		height: 400px;
+		background-color: #FFFFFF;
+	}
+	
+	.aboutstyle p{
+		font-size: 20px;
+	}
+	
+	.col3 {
+    float: left;
+	/*max 700px  min 500px*/ 			
+   	width: calc(500px + 300 * ((100vw - 1200px) / (1920 - 1200)));
+	
+		
+}	
+}
+
+
+@media (min-width: 320px) and (max-width: 1200px){
+
+	
+	a.Logo{
+		display: none;
+	}
+	
+	button.MusBut{
+		display: none;
+	}
+	
+	
+	
+	
+.col_copy{
+  width: 50%;
+  top: 1000;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto; 
+
+}
+	
+.col_copy p {
+	/*max 800 min 140*/
+	width: calc(140px + 660 * ((100vw - 320px) / (1200 - 320)));
+	display: table-cell;
+  	height: 100px;
+ 	text-align: center;
+  	vertical-align: middle;
+
+	/*max 80 min 20*/
+	padding-left: calc(20px + 100 * ((100vw - 320px) / (1200 - 320)));
+	/*max 50 min 0*/
+	padding-right: calc(0px + 40 * ((100vw - 320px) / (1200 - 320)));
+	}
+	
+.col_phone{
+  
+  top: 0;
+  right: 0;
+  bottom: 1000;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  /*max 15px  min 0*/   
+  margin-left: calc(0px + 15 * ((100vw - 320px) / (1200 - 320)));
+}
+	
+	
+	.roow3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  /*max 600px  min 1200px*/
+  
+  height: calc(600px + 600 * ((100vw - 320px) / (1200 - 320)));
+	
+	}
+
+	.col3 {
+	flex-grow:2;
+	
+	/*max 50 min 20*/	 	
+	margin-top: calc(20px + 30 * ((100vw - 320px) / (1200 - 320)));
+	margin-right: 0px;
+	/*max 50 min 20*/    
+	margin-bottom: calc(20px + 30 * ((100vw - 320px) / (1200 - 320)));				
+	margin-left: 0px;
+		
+	padding-right: 100px;
+	padding-bottom: 0px;
+	/*max 50 min 10*/
+	padding-left: calc(10px + 40 * ((100vw - 320px) / (1200 - 320)));		
+	
+	/*max 700 min 50*/	
+	width: calc(50px + 650 * ((100vw - 320px) / (1200 - 320)));
+	height: 1000px;	
+	
+}
+	.aboutstyle{
+		border-color:#000000;
+		
+		border: calc(4px + 1 * ((100vw - 320px) / (1200 - 320))) solid;
+			
+		
+		background-color: #FFFFFF;
+	}
+	
+	.aboutstyle p{
+		/*max 22px min14px */		
+		font-size: calc(14px + 8 * ((100vw - 320px) / (1200 - 320)));
+	}
+	
+	.about {
+    /*max 1250px min 650px*/		
+	height: calc(650px + 600 * ((100vw - 320px) / (1200 - 320)));		
+		
+	background-color:#EBE7E7;
+	box-shadow: 0 3px 30px #575555 inset; 
+	
+	font-family: 'Bangers', cursive;	
+	
+	padding-right: 0px;
+		
+	/*max  min */
+	padding-top: 50px;
+
+	/*max  min */
+	padding-bottom: 10px;
+	
+	
+}
+	
+}
+
